@@ -22,7 +22,49 @@ public class DiscountService {
         this.discountRepository = discountRepository;
     }
 
+    //TODO Tutaj można zrobić fajny design ze wzorcami projektowymi
+    /*
+        Przygotować interface:
 
+        public interface DiscountStrategy {
+
+            boolean availableDiscount(User user);
+
+            void applyDiscount(User user);
+     */
+
+    /*
+        @Component
+        WomenDayDiscountStrategy implements DiscountStrategy {
+
+            public boolean availableDiscount(User user) {
+                return LocalDate.now().getMonth().equals(Month.of(3)) && LocalDate.now().getDayOfMonth() == 8;
+            }
+
+            public void applyDiscount(User user) {
+            // zastosowanie zniżki
+            }
+     */
+
+    /*
+    W serwisie:
+
+    @Autowired
+        List<DiscountStrategy> strategies;
+     */
+
+    /*
+        W konkretniej metodzie:
+
+        User user = ...;
+        strategies.stream().filter(DiscountStrategy::availableDiscount).forEach(DiscountStrategy::applyDiscount);
+
+        for (DiscountStrategy strategy : strategies) {
+            if (strategy.availableDiscount(user)) {
+                  strategy.applyDiscount(user);
+          }
+      }
+     */
     public Set<Discount> discountDashBoardValidation(User user) {
         Set<Discount> discounts = user.getDiscounts();
 

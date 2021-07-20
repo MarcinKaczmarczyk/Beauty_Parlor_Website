@@ -32,6 +32,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/services").permitAll()
                 .antMatchers("/user-app", "/user-app/**","/reservation","/reservation/**").hasRole("USER")
                 .antMatchers("/css/**"/*"/static", "/static/**", "/webjars", "/webjars/**"*/).permitAll()
+                //TODO Nie używać takich zapisów. Zabezpieczenia mogą być ogólne, "odbezpieczenia" szczegółowe, na konkretne ścieżki
                 .antMatchers("/*").permitAll()
                 .anyRequest().authenticated()
                 .and()

@@ -1,3 +1,4 @@
+//TODO Nie zostawiamy takiego cuda - zakomentowany kod należy usunąć
 //package pl.coderslab.workshop.model.dto;
 //
 //import lombok.*;

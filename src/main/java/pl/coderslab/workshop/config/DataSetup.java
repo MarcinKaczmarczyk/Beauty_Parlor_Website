@@ -15,6 +15,7 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.*;
 
+//TODO W tej klasie można poszukać jakiegoś innego designu, aby nie było tutaj aż tyle zależności
 @Component
 @Slf4j
 public class DataSetup {
@@ -141,6 +142,8 @@ public class DataSetup {
     public void setupServices() {
         Set<Employee> hairdresser = employeeRepo.findAllByServiceCategory(ServiceCategory.HAIRDRESSING);
         Set<Employee> cosmetologist = employeeRepo.findAllByServiceCategory(ServiceCategory.COSMETIC);
+        //TODO Definicja usług na bazie danych + określenie, który pracownik co może robić
+        //TODO Nazwy usług, opis, czas i cene -> trzymać na bazie jako encję
         serviceRepo.save(new Service(null, "strzyżenie męskie", "opis1",
                 LocalTime.of(0, 20), 20, ServiceCategory.HAIRDRESSING/*, hairdresser*/));
         serviceRepo.save(new Service(null, "farbowanie", "opis2",

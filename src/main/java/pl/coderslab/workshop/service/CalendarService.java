@@ -79,6 +79,7 @@ public class CalendarService {
         return hourList;
     }
 
+    //TODO Haha :D piękny kod :D na pewno idzie to przerobić na jakiś schludny, zwięzły stream ;)
     //Jestem prawie pewny że można by to zrobić ow wiele ładniej i sprawniej ale z braku czasu zostawiam to tak jak jest :(
     public List<Map<Integer, List<LocalTime>>> timeMapList(List<LocalTime> times) {
         List<Map<Integer, List<LocalTime>>> visitTimeMapTest = new ArrayList<>();

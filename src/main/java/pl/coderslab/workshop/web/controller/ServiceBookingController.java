@@ -34,6 +34,7 @@ public class ServiceBookingController {
     private final CalendarService calendarService;
     private final ClientVisitRepository clientVisitRepository;
     private final VisitHourService visitHourService;
+    //TODO To jest absolutne zło!!!!
     private BookingVisitDto bookingVisitDto;
     private ClientVisit clientVisit;
 
@@ -83,7 +84,7 @@ public class ServiceBookingController {
         bookingVisitDto.setServiceTime(service.getExecutionTime());
         bookingVisitDto.setPrice(service.getPrice());
 
-
+        //TODO Czy tutaj nie powinno się coś zapisać?
         return "reservation/select-employee-reservation";
     }
 

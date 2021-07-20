@@ -5,7 +5,8 @@ public enum ServiceCategory {
     HAIRDRESSING("Fryzjer"),
     COSMETIC("Kosmetyka");
 
-    private String displayName;
+    //TODO Zrobić jako final
+    private final String displayName;
 
     ServiceCategory(String name){
         this.displayName=name;
@@ -14,6 +15,7 @@ public enum ServiceCategory {
         return displayName;
     }
 
+    //TODO Tego nie robić - tam gdzie potrzeba "ładnej" nazwy to używać "getDisplayName"
     @Override
     public String toString() {
         return displayName;

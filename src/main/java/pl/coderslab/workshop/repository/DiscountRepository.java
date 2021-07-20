@@ -6,6 +6,7 @@ import pl.coderslab.workshop.model.entity.Discount;
 
 import java.util.Optional;
 
+//TODO Nie oznaczamy tymi adnotacjami interfejsów
 @Repository
 public interface DiscountRepository extends JpaRepository<Discount,Long> {
 
